@@ -1,37 +1,8 @@
 info:
   app:
-    name: Spring Boot H2 DB App
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,beans,env,mappings
+    name: Driving Alert App
 
 server:
-  port: 8081
-
-spring:
-  datasource:
-    #url: jdbc:h2:mem:ritesh
-    #persist the data
-    url: jdbc:h2:E:/ROOT/code-base/code-base/spring-boot-app/dbData/h2DB
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
-
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-
-  h2:
-    console:
+  error:
+    whitelabel:
       enabled: true
-      #console url = http://localhost:8081/h2-console/
-
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          github:
-#            clientId:
-#            clientSecret:

@@ -1,11 +1,11 @@
-# spring-boot-app
+# driving-alert-app
 
-This is spring boot app with H2 DB and OAuth2 implementation.
+This is spring boot app for driving alerts.
 
-CRUD operation is supported by this app.
+GET and POST operation is supported by this app.
 
-Refer this article for more info
+## Swagger API Documentation
 
-https://www.javatpoint.com/spring-boot-h2-database
-
-https://spring.io/guides/tutorials/spring-boot-oauth2/#github-boot-application
+Once the application is running, access the Swagger UI at:
+- **Swagger UI**: http://localhost:8080/swagger-ui/index.html
+- **OpenAPI JSON**: http://localhost:8080/v3/api-docs
