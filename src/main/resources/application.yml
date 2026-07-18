@@ -1,6 +1,6 @@
 info:
   app:
-    name: Driving Alert App
+    name: Spring Boot App
 
 server:
   error:
