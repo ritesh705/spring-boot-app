@@ -1,8 +1,8 @@
-package com.ritesh.app.drivingapp.model;
+package com.ritesh.app.drivingalertapp.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
-public class Alert {
+public class DrivingAlert {
     @Schema(description = "Unique alert identifier", example = "1")
     private int alertId;
 

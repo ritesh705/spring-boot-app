@@ -1,7 +1,7 @@
-package com.ritesh.app.drivingapp.controller;
+package com.ritesh.app.drivingalertapp.controller;
 
-import com.ritesh.app.drivingapp.model.Alert;
-import com.ritesh.app.drivingapp.service.AlertService;
+import com.ritesh.app.drivingalertapp.model.DrivingAlert;
+import com.ritesh.app.drivingalertapp.service.DrivingAlertService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -14,10 +14,10 @@ import java.util.Date;
 @RestController
 @RequestMapping("/api")
 @Tag(name = "Driving Alerts", description = "Driving alert management APIs")
-public class AlertController {
+public class DrivingAlertController {
 
     @Autowired
-    private AlertService alertService;
+    private DrivingAlertService alertService;
 
     @PostMapping("/createAlertEvent")
     @Operation(summary = "Create a new driving alert event")
@@ -25,7 +25,7 @@ public class AlertController {
             @ApiResponse(responseCode = "200", description = "Alert created successfully"),
             @ApiResponse(responseCode = "400", description = "Invalid request")
     })
-    private int createAlertEvent(@RequestBody Alert alert){
+    private int createAlertEvent(@RequestBody DrivingAlert alert){
         int response = -1;
         alert.setTimestamp(new Date().toString());
         alertService.saveOrUpdate(alert);
@@ -38,8 +38,8 @@ public class AlertController {
             @ApiResponse(responseCode = "200", description = "Alert found"),
             @ApiResponse(responseCode = "404", description = "Alert not found")
     })
-    private Alert getAlert(@PathVariable("alertId") int id){
-        Alert response = null;
+    private DrivingAlert getAlert(@PathVariable("alertId") int id){
+        DrivingAlert response = null;
         response = alertService.getEmployeeById(id);
         return response;
     }
